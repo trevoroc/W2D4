@@ -41,6 +41,13 @@ def third_anagram?(string, anagram)
 end
 
 def fourth_anagram?(string, anagram)
+  string_hash = Hash.new(0)
+  anagram_hash = Hash.new(0)
+
+  string.each { |c| string_hash[c] += 1 }
+  anagram.each { |c| anagram_hash[c] += 1 }
+
+  string_hash == anagram_hash
 end
 
 p third_anagram?("gizmo", "sally")    #=> false
