@@ -44,7 +44,8 @@ def largest_contiguous_subsum(list)
 end
 
 def better_cont_subsum(list)
-  best_sum = list.max
+  best_sum = list.first
+
   running_sum = 0
 
   list.each do |el|
@@ -60,10 +61,10 @@ def better_cont_subsum(list)
 end
 
 #
-# 100.times do
-#     arr = (-100..100).to_a.sample(20)
-#     p largest_contiguous_subsum(arr) == better_cont_subsum(arr)
-# end
+100.times do
+    arr = (-100..100).to_a.sample(20)
+    p largest_contiguous_subsum(arr) == better_cont_subsum(arr)
+end
 
 # list = [0, 3, 4, 4, -5, 10, 1, 90]
 # p my_min(list)
