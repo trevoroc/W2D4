@@ -1,4 +1,3 @@
-require 'math'
 class MyStack
   def initialize
     @store = []
